@@ -54,3 +54,14 @@ int no_int_error(unsigned int line_no)
 	fprintf(stderr, "L%u: usage: push integer\n", line_no);
 	return (EXIT_FAILURE);
 }
+
+/**
+ * malloc_error - it prints out malloc error messages.
+ *
+ * Return: (EXIT_FAILURE) always.
+ */
+int malloc_error(void)
+{
+	fprintf(stderr, "Error: malloc failed\n");
+	return (EXIT_FAILURE);
+}
