@@ -9,18 +9,20 @@ Files containing Monty byte codes usually have the .m extension. Most of the ind
 Monty byte code files can contain blank lines (empty or made of spaces only, and any additional text after the opcode or its required argument is not taken into account.
 
 For example(`file.m`):
-`push 1
+```
+push 1
 pint
 push 2
 pint
 push 3
-pint`
+pint
+```
 
 ## Compilation & Output
 `gcc -Wall -Werror -Wextra -pedantic -std=c89 *.c -o monty && ./monty`
 
 |OPCODE|DESCRIPTION|
---------------------
+|-------|-------------|
 |`push`| pushes an element to the stack|
 |`pall`| prints all the values on the stack, starting form the top|
 |`pint`| prints the value at the top of the stack|
