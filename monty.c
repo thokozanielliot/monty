@@ -72,11 +72,11 @@ int main(int ac, char *av[])
 {
 	void (*f)(stack_t **stack, unsigned int line_number);
 	FILE *fd;
-	size_t size = 256, getline(char **lineptr, size_t *n, FILE*stream);
+	size_t size = 256, getline(char **lineptr, size_t *n, FILE *stream);
 	ssize_t nlines;
 	char *lines[2] = {NULL, NULL};
 
-	fd = check_input(ac,av);
+	fd = check_input(ac, av);
 	start_globv(fd);
 	nlines = getline(&globv.buffer, &size, fd);
 	while (nlines != -1)
@@ -87,7 +87,7 @@ int main(int ac, char *av[])
 			f = get_opcodes(lines[0]);
 			if (!f)
 			{
-				fprintf(stderr, "L%u: ",globv.curr);
+				fprintf(stderr, "L%u: ", globv.curr);
 				fprintf(stderr, "unknown instruction %s\n", lines[0]);
 				free_globv();
 				exit(EXIT_FAILURE);

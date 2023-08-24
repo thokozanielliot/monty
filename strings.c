@@ -52,7 +52,7 @@ int _searchChar(char *s, char c)
 /**
  * _strtow - Tokenize string
  * @s: String
- * @d: Delimitors
+ * @delim: Delimitors
  *
  * Return: tokenized string
  */

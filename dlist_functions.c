@@ -8,7 +8,7 @@ void free_dlistint(stack_t *head);
  * add_dnodeint_end - Add node at the end of doubly linked list
  * @head: Doubly linked list
  * @n: Data
- * 
+ *
  * Return: Double linked list
  */
 stack_t *add_dnodeint_end(stack_t **head, const int n)
