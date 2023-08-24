@@ -72,7 +72,7 @@ int main(int ac, char *av[])
 {
 	void (*f)(stack_t **stack, unsigned int line_number);
 	FILE *fd;
-	size_t size = 256, getline(char **lineptr, size_t *n, FILE *stream);
+	size_t size = 256;/* getline(char **lineptr, size_t *n, FILE *stream);*/
 	ssize_t nlines;
 	char *lines[2] = {NULL, NULL};
 
@@ -113,6 +113,11 @@ void (*get_opcodes(char *opc))(stack_t **stack, unsigned int line_number)
 	instruction_t instruct[] = {
 		{"push", _push},
 		{"pall", _pall},
+		{"pint", _pint},
+		{"pop", _pop},
+		{"swap", _swap},
+		{"add", _add},
+		{"np", _nop},
 		{NULL, NULL}
 	};
 	int i;
